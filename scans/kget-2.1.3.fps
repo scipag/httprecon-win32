@@ -1,0 +1,81 @@
+<get_existing>
+HTTP/1.1 401 Authorization Required
+Date: Tue, 02 Dec 2008 23:10:10 GMT
+Server: KGet
+WWW-Authenticate: Basic realm="KGet Webinterface Authorization"
+Content-Type: text/html; charset=UTF-8
+Content-Length: 337
+
+</get_existing>
+<get_long>
+HTTP/1.1 401 Authorization Required
+Date: Tue, 02 Dec 2008 23:10:10 GMT
+Server: KGet
+WWW-Authenticate: Basic realm="KGet Webinterface Authorization"
+Content-Type: text/html; charset=UTF-8
+Content-Length: 337
+
+</get_long>
+<get_nonexisting>
+HTTP/1.1 401 Authorization Required
+Date: Tue, 02 Dec 2008 23:10:10 GMT
+Server: KGet
+WWW-Authenticate: Basic realm="KGet Webinterface Authorization"
+Content-Type: text/html; charset=UTF-8
+Content-Length: 337
+
+</get_nonexisting>
+<wrong_version>
+HTTP/1.1 401 Authorization Required
+Date: Tue, 02 Dec 2008 23:10:10 GMT
+Server: KGet
+WWW-Authenticate: Basic realm="KGet Webinterface Authorization"
+Content-Type: text/html; charset=UTF-8
+Content-Length: 337
+
+</wrong_version>
+<head_existing>
+HTTP/1.1 401 Authorization Required
+Date: Tue, 02 Dec 2008 23:10:10 GMT
+Server: KGet
+WWW-Authenticate: Basic realm="KGet Webinterface Authorization"
+Content-Type: text/html; charset=UTF-8
+Content-Length: 337
+
+</head_existing>
+<options>
+HTTP/1.1 401 Authorization Required
+Date: Tue, 02 Dec 2008 23:10:10 GMT
+Server: KGet
+WWW-Authenticate: Basic realm="KGet Webinterface Authorization"
+Content-Type: text/html; charset=UTF-8
+Content-Length: 337
+
+</options>
+<delete_existing>
+HTTP/1.1 401 Authorization Required
+Date: Tue, 02 Dec 2008 23:10:10 GMT
+Server: KGet
+WWW-Authenticate: Basic realm="KGet Webinterface Authorization"
+Content-Type: text/html; charset=UTF-8
+Content-Length: 337
+
+</delete_existing>
+<wrong_method>
+HTTP/1.1 401 Authorization Required
+Date: Tue, 02 Dec 2008 23:10:10 GMT
+Server: KGet
+WWW-Authenticate: Basic realm="KGet Webinterface Authorization"
+Content-Type: text/html; charset=UTF-8
+Content-Length: 337
+
+</wrong_method>
+<attack_request>
+HTTP/1.1 401 Authorization Required
+Date: Tue, 02 Dec 2008 23:10:10 GMT
+Server: KGet
+WWW-Authenticate: Basic realm="KGet Webinterface Authorization"
+Content-Type: text/html; charset=UTF-8
+Content-Length: 337
+
+</attack_request>

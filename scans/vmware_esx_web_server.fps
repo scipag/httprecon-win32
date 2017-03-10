@@ -1,0 +1,67 @@
+<get_existing>
+HTTP/1.1 200 OK
+Date: Mon, 3 Mar 2008 09:23:39 GMT
+Content-Type: text/html
+Content-Length: 3155
+
+</get_existing>
+<get_long>
+HTTP/1.1 404 Not Found
+Date: Mon, 3 Mar 2008 09:23:39 GMT
+Connection: close
+Content-Length: 0
+
+</get_long>
+<get_nonexisting>
+HTTP/1.1 404 Not Found
+Date: Mon, 3 Mar 2008 09:23:39 GMT
+Connection: close
+Content-Length: 0
+
+</get_nonexisting>
+<wrong_version>
+HTTP/1.1 200 OK
+Date: Mon, 3 Mar 2008 09:23:39 GMT
+Content-Type: text/html
+Content-Length: 3155
+
+</wrong_version>
+<head_existing>
+HTTP/1.1 400 Bad Request
+Date: Mon, 3 Mar 2008 09:23:39 GMT
+Connection: close
+Content-Type: text/html
+Content-Length: 50
+
+</head_existing>
+<options>
+HTTP/1.1 400 Bad Request
+Date: Mon, 3 Mar 2008 09:23:39 GMT
+Connection: close
+Content-Type: text/html
+Content-Length: 50
+
+</options>
+<delete_existing>
+HTTP/1.1 400 Bad Request
+Date: Mon, 3 Mar 2008 09:23:39 GMT
+Connection: close
+Content-Type: text/html
+Content-Length: 50
+
+</delete_existing>
+<wrong_method>
+HTTP/1.1 400 Bad Request
+Date: Mon, 3 Mar 2008 09:23:39 GMT
+Connection: close
+Content-Type: text/html
+Content-Length: 50
+
+</wrong_method>
+<attack_request>
+HTTP/1.1 404 Not Found
+Date: Mon, 3 Mar 2008 09:23:39 GMT
+Connection: close
+Content-Length: 0
+
+</attack_request>

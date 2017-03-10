@@ -1,0 +1,100 @@
+<get_existing>
+HTTP/1.1 200 OK
+Date: Wed, 26 Mar 2008 21:57:02 GMT
+Server: Apache
+Last-Modified: Wed, 19 Mar 2008 17:28:52 GMT
+ETag: "674c23-0-448cd962efd00"
+Accept-Ranges: bytes
+Content-Length: 0
+Keep-Alive: timeout=15, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+
+</get_existing>
+<get_long>
+HTTP/1.1 403 Forbidden
+Date: Wed, 26 Mar 2008 21:57:03 GMT
+Server: Apache
+Content-Length: 1298
+Keep-Alive: timeout=15, max=99
+Connection: Keep-Alive
+Content-Type: text/html; charset=iso-8859-1
+
+</get_long>
+<get_nonexisting>
+HTTP/1.1 404 Not Found
+Date: Wed, 26 Mar 2008 21:57:03 GMT
+Server: Apache
+Content-Length: 281
+Keep-Alive: timeout=15, max=100
+Connection: Keep-Alive
+Content-Type: text/html; charset=iso-8859-1
+
+</get_nonexisting>
+<wrong_version>
+HTTP/1.1 200 OK
+Date: Wed, 26 Mar 2008 21:57:03 GMT
+Server: Apache
+Last-Modified: Wed, 19 Mar 2008 17:28:52 GMT
+ETag: "674c23-0-448cd962efd00"
+Accept-Ranges: bytes
+Content-Length: 0
+Keep-Alive: timeout=15, max=99
+Connection: Keep-Alive
+Content-Type: text/html
+
+</wrong_version>
+<head_existing>
+HTTP/1.1 200 OK
+Date: Wed, 26 Mar 2008 21:57:03 GMT
+Server: Apache
+Last-Modified: Wed, 19 Mar 2008 17:28:52 GMT
+ETag: "674c23-0-448cd962efd00"
+Accept-Ranges: bytes
+Keep-Alive: timeout=15, max=98
+Connection: Keep-Alive
+Content-Type: text/html
+
+</head_existing>
+<options>
+HTTP/1.1 200 OK
+Date: Wed, 26 Mar 2008 21:57:03 GMT
+Server: Apache
+Allow: GET,HEAD,POST,OPTIONS,TRACE
+Content-Length: 0
+Keep-Alive: timeout=15, max=97
+Connection: Keep-Alive
+Content-Type: text/html
+
+</options>
+<delete_existing>
+HTTP/1.1 405 Method Not Allowed
+Date: Wed, 26 Mar 2008 21:57:03 GMT
+Server: Apache
+Allow: GET,HEAD,POST,OPTIONS,TRACE
+Content-Length: 306
+Keep-Alive: timeout=15, max=96
+Connection: Keep-Alive
+Content-Type: text/html; charset=iso-8859-1
+
+</delete_existing>
+<wrong_method>
+HTTP/1.1 501 Method Not Implemented
+Date: Wed, 26 Mar 2008 21:57:03 GMT
+Server: Apache
+Allow: GET,HEAD,POST,OPTIONS,TRACE
+Content-Length: 288
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+</wrong_method>
+<attack_request>
+HTTP/1.1 404 Not Found
+Date: Wed, 26 Mar 2008 21:57:03 GMT
+Server: Apache
+Content-Length: 280
+Keep-Alive: timeout=15, max=100
+Connection: Keep-Alive
+Content-Type: text/html; charset=iso-8859-1
+
+</attack_request>

@@ -1,0 +1,55 @@
+<get_existing>
+HTTP/1.1 200 OK
+Server: RealVNC/4.0
+Date: Tue, 07 Apr 2009 11:12:08 GMT
+Last-Modified: Tue, 07 Apr 2009 11:12:08 GMT
+Content-Length: 240
+Connection: close
+Content-Type: text/html 
+
+</get_existing>
+<get_long>
+</get_long>
+<get_nonexisting>
+HTTP/1.1 404 Not Found
+Server: RealVNC/4.0
+Date: Tue, 07 Apr 2009 11:12:37 GMT
+Last-Modified: Tue, 07 Apr 2009 11:12:37 GMT
+Connection: close
+Content-Type: text/html
+
+</get_nonexisting>
+<wrong_version>
+</wrong_version>
+<head_existing>
+HTTP/1.1 200 OK
+Server: RealVNC/4.0
+Date: Tue, 07 Apr 2009 11:13:27 GMT
+Last-Modified: Tue, 07 Apr 2009 11:13:27 GMT
+Content-Length: 240
+Connection: close
+Content-Type: text/html
+
+</head_existing>
+<options>
+HTTP/1.1 501 Not Implemented
+Server: RealVNC/4.0
+Date: Tue, 07 Apr 2009 11:11:35 GMT
+Last-Modified: Tue, 07 Apr 2009 11:11:35 GMT
+Connection: close
+Content-Type: text/html
+
+</options>
+<delete_existing>
+HTTP/1.1 501 Not Implemented
+Server: RealVNC/4.0
+Date: Tue, 07 Apr 2009 11:13:41 GMT
+Last-Modified: Tue, 07 Apr 2009 11:13:41 GMT
+Connection: close
+Content-Type: text/html
+
+</delete_existing>
+<wrong_method>
+</wrong_method>
+<attack_request>
+</attack_request>

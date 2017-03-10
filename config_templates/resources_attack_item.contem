@@ -1,0 +1,6 @@
+/etc/passwd?format=%%%%&xss=""><script>alert('xss');</script>&traversal=../../&sql=' OR 1;
+../../etc/passwd
+/scripts/..%c1%1c../winnt/system32/cmd.exe?/c+dir
+/forum.php?user=<script>alert(document.cookie);</script>
+/forum.php?user=' OR 1;
+/%00

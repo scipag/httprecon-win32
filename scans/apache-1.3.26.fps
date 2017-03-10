@@ -1,0 +1,77 @@
+<get_existing>
+HTTP/1.1 200 OK
+Date: Thu, 03 Apr 2008 02:37:08 GMT
+Server: Apache
+Connection: close
+Content-Type: text/html
+
+</get_existing>
+<get_long>
+HTTP/1.1 403 Forbidden
+Date: Thu, 03 Apr 2008 02:37:08 GMT
+Server: Apache
+Connection: close
+Content-Type: text/html
+
+</get_long>
+<get_nonexisting>
+HTTP/1.1 404 Not Found
+Date: Thu, 03 Apr 2008 02:37:09 GMT
+Server: Apache
+Connection: close
+Content-Type: text/html
+
+</get_nonexisting>
+<wrong_version>
+HTTP/1.1 200 OK
+Date: Thu, 03 Apr 2008 02:37:09 GMT
+Server: Apache
+Connection: close
+Content-Type: text/html
+
+</wrong_version>
+<head_existing>
+HTTP/1.1 200 OK
+Date: Thu, 03 Apr 2008 02:37:09 GMT
+Server: Apache
+Keep-Alive: timeout=15, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+
+</head_existing>
+<options>
+HTTP/1.1 200 OK
+Date: Thu, 03 Apr 2008 02:37:09 GMT
+Server: Apache
+Content-Length: 0
+Allow: GET, HEAD, OPTIONS, TRACE
+Keep-Alive: timeout=15, max=100
+Connection: Keep-Alive
+
+</options>
+<delete_existing>
+HTTP/1.1 405 Method Not Allowed
+Date: Thu, 03 Apr 2008 02:37:09 GMT
+Server: Apache
+Allow: GET, HEAD, OPTIONS, TRACE
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+</delete_existing>
+<wrong_method>
+HTTP/1.1 501 Method Not Implemented
+Date: Thu, 03 Apr 2008 02:37:09 GMT
+Server: Apache
+Allow: GET, HEAD, OPTIONS, TRACE
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+</wrong_method>
+<attack_request>
+HTTP/1.1 404 Not Found
+Date: Thu, 03 Apr 2008 02:37:10 GMT
+Server: Apache
+Connection: close
+Content-Type: text/html
+
+</attack_request>
