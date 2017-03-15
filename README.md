@@ -1,18 +1,18 @@
 # httprecon - Advanced Web Server Fingerprinting
 
-##Introduction
+## Introduction
 
 The httprecon project is doing some research in the field of web server fingerprinting, also known as http fingerprinting. The goal is the highly accurate identification of given httpd implementations. This is very important within professional vulnerability analysis.
 
 Besides the discussion of different approaches and the documentation of gathered results also an implementation for automated analysis is provided. This software shall improve the easyness and efficiency of this kind of enumeration. Traditional approaches as like banner-grabbing, status code enumeration and header ordering analysis are used. However, many other analysis techniques were introduced to increase the possibilities of accurate web server fingerprinting. Some of them were already discussed in the book Die Kunst des Penetration Testing (Chapter 9.3, HTTP-Fingerprinting, pp. 530-550).
 
-##Flow
+## Flow
 
 The application works very straight forward. After the user has defined the target service which shall be fingerprinted, a common tcp connection is opened to the destination port. If the connection could be established, the http requests are sent to the target service. This one will shall react with responses. These could be dissected to identify some specific fingerprint elements. Those elements are looked up in the local fingerprint database. If there is a match, the according implementation is flagged as "identified". All these flags were counted so httprecon is able to determine which implementation has the best match rate.
 
 ![Flow](http://www.computec.ch/projekte/httprecon/documentation/flow.png)
 
-##Architecture
+## Architecture
 
 The following picture illustrates the architecture of the whole framework. The scan engine uses nine different requests which are sent to the target web server. These shall provoke the response which can be used for the fingerprinting. There were different kind of requests used. Some of them are very common and legitimate (e.g. GET / HTTP/1.1) and others are usually not accepted due to their malicious nature (e.g. a very long URI in a GET request).
 
@@ -20,7 +20,7 @@ The following picture illustrates the architecture of the whole framework. The s
 
 The dissection of the responses is handled by the parsing and fingerprint engine. As you can see many different fingerprint elements are looked up (e.g. statuscode, banner, Etag length, header-order, etc.). These elements are saved in the local fingerprint database which allows the sum of the matches. All data is correlated which will result in the final fingerprint scan report.
 
-##Features
+## Features
 
 These are the main features of the current implementation of httprecon which makes this solution better than other tools of this kind:
 
@@ -37,7 +37,7 @@ These are the main features of the current implementation of httprecon which mak
 
 There are differen applications for http fingerprinting available. This Excel sheet is comparing the four most popular HTTP fingerprinting tools (httprecon, httprint, hmap, and WebserverFP).
 
-##Key Analysis Index
+## Key Analysis Index
 
 Most web server implementations come with a Key Analysis Index (KAI), a very special and dominant behaviour which allows a very quick identification. The following list shall demonstrate the KAI for some popular implementations:
 
@@ -55,7 +55,7 @@ Most web server implementations come with a Key Analysis Index (KAI), a very spe
 * Gatling: A very special behaviour for successful requests is the status text "Coming Up" where usually an "OK" is used.
 * Squid: Common http get requests always produce the announcement of HTTP/1.0 instead of HTTP/1.1 as protocol.
 
-##Counter-measures
+## Counter-measures
 
 The possibility of fingerprinting is not a vulnerability in a traditional way which allows to compromise a host. It is more a flaw or exposure which may provide the foundation for further enumeration and specific attack scenarios.
 
@@ -63,7 +63,7 @@ The possibility of fingerprinting is not a vulnerability in a traditional way wh
 
 Nevertheless, applying some counter-measures to harden a service is always a good idea. Preventing fingerprinting 100 % is not possible due to the nature of interaction between network software. But there are possibilities to decrease the accuracy of such an analysis. These are illustrated in the diagram and listed below:
 
-###Change or surpession of banner
+### Change or supression of banner
 
 The most accepted and widely known approach to defend against fingerprinting is the manipulation or change of the application banner. Within web responses the line Server announces the name of the given implementation. Some web servers allow the change of this value within a configuration file.
 
@@ -108,7 +108,7 @@ The open-source web server fnord does not support any configuration settings or 
 
 Some modules (e.g. PHP and SSH) announce themselves within the Server line. In most cases this can be prevented with a configuration setting for the according module. For PHP in the file php.ini the value expose_php must be set to Off.
 
-###Change statuscode and statustext
+### Change statuscode and statustext
 
 Web servers include implementation dependent statuscodes and statustexts in their responses. Changeing them prevents most of todays web server fingerprinting. Only a few http daemons allow such change of basic behaviour within run-time configuration.
 
@@ -247,7 +247,7 @@ An easier way to change the status reaction for specific request types (e.g. uns
 RewriteRule .* - [F]
 ```
 
-###Change header-values and order
+### Change header-values and order
 
 Some web server fingerprinting tools regard header values and header order. Changeing this within the web server usually requires some deep impact to the source code too. This requires a very high level of understanding the given application. The rate of errors might be very high with such an intrusive change.
 
@@ -261,7 +261,7 @@ And in JSP different methods of the response object defined by the javax.servlet
 
 The ColdFusion Markup Language (CFML) uses the tag cfheader to define headers and their values. Status codes can be changed with a statement like <cfheader statusCode="299" statusText="Very unusual status code"> and new header lines introduced with a statement like <cfheader name="header_name" value="header_value" charset="charset">.
 
-###Redirect known attack scripts
+### Redirect known attack scripts
 
 Another way of defending against fingerprinting utilities is to redirect attack scripts as like httprecon. Within the following .htaccess example the well-known user-agents are detected and redirected to the attackers own computer:
 ```RewriteCond %{HTTP_USER_AGENT} ^libwww-perl [OR]
@@ -274,7 +274,7 @@ This introduces several advantages. First, the attacker is consuming more of his
 
 However, this blacklist technique only works as long as the attack scripts are detected properly. If the attacker is going to change the approach and behavior of the scanning software, no further redirection might be possible.
 
-##Trivia and Fun Stuff
+## Trivia and Fun Stuff
 
 During the development of httprecon and the use of the software in professional penetration tests several funny things could be observed:
 
