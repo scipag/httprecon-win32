@@ -80,7 +80,7 @@ Public Sub InitializeFiles()
     app_file_optionsallowed = "options-allowed" & sExtension
     app_file_optionspublic = "options-public" & sExtension
     app_file_optionsdelimiter = "options-delimited" & sExtension
-    app_file_etaglength = "etag-legth" & sExtension
+    app_file_etaglength = "etag-length" & sExtension
     app_file_etagquotes = "etag-quotes" & sExtension
     app_file_contenttype = "content-type" & sExtension
     app_file_acceptrange = "accept-range" & sExtension
